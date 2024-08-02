@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Digience.Pages.Login"
+                 xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="Transparent" StatusBarStyle="DarkContent"/>
+    </Page.Behaviors>
+    <VerticalStackLayout Spacing="20"                        
+                         VerticalOptions="Center"
+        Padding="40" Margin="0,0,0,200">
+
+        <StackLayout Margin="0,0,0,40">
+            <Image Source="app_icon.svg" HorizontalOptions="Center" WidthRequest="60"/>
+        </StackLayout>
+        <Label Text="Login" FontSize="Title" HorizontalOptions="Center"/>
+        <StackLayout Spacing="10">
+            <Entry Placeholder="email" />
+            <Entry IsPassword="true" Placeholder="password" />
+        </StackLayout>
+        <Frame CornerRadius="40" Padding="0">
+            <Button Text="Login" Clicked="Login_Button_Clicked"/>
+        </Frame>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Don't have an account? "/>
+            <Label Text="Sign Up" 
+                   TextColor="{x:StaticResource Primary}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="siginup_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

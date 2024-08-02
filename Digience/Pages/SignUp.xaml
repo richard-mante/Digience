@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Digience.Pages.SignUp">
+    <VerticalStackLayout Spacing="20"                        
+                     VerticalOptions="Center"
+    Padding="40" Margin="0,0,0,200">
+        <StackLayout Margin="0,0,0,40">
+            <Image Source="app_icon.svg" HorizontalOptions="Center" WidthRequest="60"/>
+        </StackLayout>
+        <Label Text="Login" FontSize="Title" HorizontalOptions="Center"/>
+        <StackLayout Spacing="10">
+            <Entry x:Name="email" Placeholder="email" />
+            <Entry x:Name="password" IsPassword="true" Placeholder="password" />
+            <Entry x:Name="repeatPassword" IsPassword="true" Placeholder="repeat password" />
+        </StackLayout>
+        <Frame CornerRadius="40" Padding="0">
+            <Button Text="Login" Clicked="Signup_Button_Clicked"/>
+        </Frame>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Already have an account? "/>
+            <Label Text="Login" TextColor="{x:StaticResource Primary}" FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
