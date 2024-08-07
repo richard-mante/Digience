@@ -10,16 +10,20 @@
         </StackLayout>
         <Label Text="Login" FontSize="Title" HorizontalOptions="Center"/>
         <StackLayout Spacing="10">
-            <Entry x:Name="email" Placeholder="email" />
-            <Entry x:Name="password" IsPassword="true" Placeholder="password" />
+            <Entry x:Name="signupEmail" Placeholder="email" />
+            <Entry x:Name="signupPassword" IsPassword="true" Placeholder="password" />
             <Entry x:Name="repeatPassword" IsPassword="true" Placeholder="repeat password" />
         </StackLayout>
         <Frame CornerRadius="40" Padding="0">
-            <Button Text="Login" Clicked="Signup_Button_Clicked"/>
+            <Button x:Name="signupButton" Text="Login" Clicked="Signup_Button_Clicked"/>
         </Frame>
         <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Already have an account? "/>
-            <Label Text="Login" TextColor="{x:StaticResource Primary}" FontAttributes="Bold"/>
+            <Label Text="Login" TextColor="{x:StaticResource Primary}" FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Login_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

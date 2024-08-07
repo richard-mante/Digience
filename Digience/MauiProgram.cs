@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
 using Microsoft.Maui.Controls.PlatformConfiguration;
+using MauiIcons.SegoeFluent;
 
 namespace Digience
 {
@@ -12,6 +13,7 @@ namespace Digience
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseSegoeFluentMauiIcons()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

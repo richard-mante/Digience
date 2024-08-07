@@ -6,25 +6,27 @@
     xmlns:pages="clr-namespace:Digience.Pages"
     xmlns:local="clr-namespace:Digience"
     Shell.FlyoutBehavior="Disabled"
-    Title="Digience">
+    Title="Digience"
+    xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons">
+
     <TabBar>
-        <Tab Icon="home.png">
+        <Tab Icon="{mi:SegoeFluent Icon=Home}" Title="Home">
             <ShellContent
                 ContentTemplate="{DataTemplate pages:Feeds}"
                 Route="Feeds" />
         </Tab>
-        
-        <Tab Icon="chat.png">
+
+        <Tab Icon="{mi:SegoeFluent Icon=Message}" Title="Message">
             <ShellContent
                 ContentTemplate="{DataTemplate pages:Chat}"
                 Route="Chat" />
         </Tab>
-        <Tab Icon="notification.png">
+        <Tab Icon="{mi:SegoeFluent Icon=Ringer}" Title="Notification">
             <ShellContent
         ContentTemplate="{DataTemplate pages:Notification}"
         Route="Notification" />
         </Tab>
-        <Tab Icon="profile.png">
+        <Tab Icon="{mi:SegoeFluent Icon=Contact}" Title="Profile">
             <ShellContent
         ContentTemplate="{DataTemplate pages:Profile}"
         Route="Profile" />

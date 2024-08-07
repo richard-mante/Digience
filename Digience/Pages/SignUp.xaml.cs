@@ -11,4 +11,9 @@ public partial class SignUp : ContentPage
     {
 		Application.Current.MainPage = new Login();
     }
+
+    private void Login_Tapped(object sender, TappedEventArgs e)
+    {
+        Navigation.PushAsync(new Login());
+    }
 }

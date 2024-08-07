@@ -40,7 +40,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="transparent"/>
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="transparent" />
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" BaseSize="90,90" />
 		<!-- Images -->
@@ -69,6 +69,7 @@
 	
 
 	<ItemGroup>
+		<PackageReference Include="AathifMahir.Maui.MauiIcons.SegoeFluent" Version="3.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.2" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
