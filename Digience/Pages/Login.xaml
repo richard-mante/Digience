@@ -9,22 +9,22 @@
     </Page.Behaviors>
     <VerticalStackLayout Spacing="20"                        
                          VerticalOptions="Center"
-        Padding="40" Margin="0,0,0,200">
+        Padding="40" Margin="0,0,0,200" MaximumWidthRequest="400">
 
         <StackLayout Margin="0,0,0,40">
             <Image Source="app_icon.svg" HorizontalOptions="Center" WidthRequest="60"/>
         </StackLayout>
         <Label Text="Login" FontSize="Title" HorizontalOptions="Center"/>
         <StackLayout Spacing="10">
-            <Entry x:Name="email" Placeholder="email" />
-            <Entry x:Name="password" IsPassword="true" Placeholder="password" />
+            <Entry x:Name="email" x:Uid="email" Placeholder="email" />
+            <Entry x:Name="password" x:Uid="password" IsPassword="true" Placeholder="password" />
         </StackLayout>
-        <Frame CornerRadius="40" Padding="0">
-            <Button x:Name="loginButton" Text="Login" Clicked="Login_Button_Clicked"/>
+        <Frame CornerRadius="25" Padding="0">
+            <Button x:Name="loginButton" x:Uid="loginButton" Text="Login" Clicked="Login_Button_Clicked"/>
         </Frame>
         <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Don't have an account? "/>
-            <Label x:Name="signupLink" Text="Sign Up" 
+            <Label x:Name="signupLink" x:Uid="signupLink" Text="Sign Up" 
                    TextColor="{x:StaticResource Primary}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="siginup_Tapped"/>

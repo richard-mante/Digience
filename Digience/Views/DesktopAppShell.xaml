@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="Digience.Views.DesktopAppShell"
+       xmlns:pages="clr-namespace:Digience.Pages"
+       xmlns:local="clr-namespace:Digience"
+       xmlns:mi="http://www.aathifmahir.com/dotnet/2022/maui/icons">
+   
+    <TabBar>
+        <Tab Icon="{mi:SegoeFluent Icon=Home}" Title="Home">
+            <ShellContent
+            ContentTemplate="{DataTemplate pages:Feeds}"
+            Route="Feeds" />
+        </Tab>
+
+        <Tab Icon="{mi:SegoeFluent Icon=Message}" Title="Message">
+            <ShellContent
+            ContentTemplate="{DataTemplate pages:Chat}"
+            Route="Chat" />
+        </Tab>
+        <Tab Icon="{mi:SegoeFluent Icon=Ringer}" Title="Notification">
+            <ShellContent
+                ContentTemplate="{DataTemplate pages:Notification}"
+                Route="Notification" />
+        </Tab>
+        <Tab Icon="{mi:SegoeFluent Icon=Contact}" Title="Profile">
+            <ShellContent
+                ContentTemplate="{DataTemplate pages:Profile}"
+                Route="Profile" />
+        </Tab>
+    </TabBar>
+    <MenuFlyoutItem>
+        
+    </MenuFlyoutItem>
+</Shell>

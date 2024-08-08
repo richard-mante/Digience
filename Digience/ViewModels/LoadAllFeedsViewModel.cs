@@ -14,7 +14,6 @@ namespace Digience.ViewModels
             Files = new List<ImageInfo>
                 {
                     new ImageInfo { LinkToImage = "https://images.stockcake.com/public/a/1/4/a14178af-d267-4ebe-a6c5-66448b3b0271_large/playful-learning-moment-stockcake.jpg" },
-                    new ImageInfo { LinkToImage = "https://images.stockcake.com/public/a/1/4/a14178af-d267-4ebe-a6c5-66448b3b0271_large/playful-learning-moment-stockcake.jpg" }
                 },
             PostInformation = "This is the second post information.",
             PostTitle = "Second Post",
@@ -36,7 +35,6 @@ namespace Digience.ViewModels
             Files = new List<ImageInfo>
                 {
                     new ImageInfo { LinkToImage = "https://images.stockcake.com/public/a/1/4/a14178af-d267-4ebe-a6c5-66448b3b0271_large/playful-learning-moment-stockcake.jpg" },
-                    new ImageInfo { LinkToImage = "https://images.stockcake.com/public/a/1/4/a14178af-d267-4ebe-a6c5-66448b3b0271_large/playful-learning-moment-stockcake.jpg" }
                 },
             PostInformation = "This is the second post information.",
             PostTitle = "Second Post",

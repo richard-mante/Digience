@@ -1,3 +1,5 @@
+using Digience.Views;
+
 namespace Digience.Pages;
 
 public partial class Login : ContentPage
@@ -9,9 +11,12 @@ public partial class Login : ContentPage
 
     private void  Login_Button_Clicked(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new AppShell();
+#if ANDROID || IOS
+        Application.Current.MainPage = new MobileAppShell();
+#else
+        Application.Current.MainPage = new DesktopAppShell();
+#endif    
     }
-
     private void siginup_Tapped(object sender, TappedEventArgs e)
     {
         Application.Current.MainPage = new SignUp();
