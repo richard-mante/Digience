@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digience", "Digience\Digience.csproj", "{D12D3E4C-DECD-4806-8ED1-A19E7D64670E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digience", "Digience\Digience.csproj", "{D12D3E4C-DECD-4806-8ED1-A19E7D64670E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Degience.UI.Tests", "Degience.UI.Tests\Degience.UI.Tests.csproj", "{D649B21C-A688-44E6-A697-30E933F84982}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{D12D3E4C-DECD-4806-8ED1-A19E7D64670E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D12D3E4C-DECD-4806-8ED1-A19E7D64670E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D12D3E4C-DECD-4806-8ED1-A19E7D64670E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D649B21C-A688-44E6-A697-30E933F84982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D649B21C-A688-44E6-A697-30E933F84982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D649B21C-A688-44E6-A697-30E933F84982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D649B21C-A688-44E6-A697-30E933F84982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
