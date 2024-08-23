@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Digience.ViewModels"
+             xmlns:models="clr-namespace:Digience.Models"
+             x:Class="Digience.Pages.Feeds"
+             x:DataType="vm:LoadAllFeedsViewModel">
+    <FlexLayout JustifyContent="Center">
+        <ScrollView>
+            <StackLayout MaximumWidthRequest="500">
+                <CollectionView ItemsSource="{Binding Feeds}" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Feed">
+                            <VerticalStackLayout Padding="12" Spacing="20">
+                                <FlexLayout AlignItems="Center" HeightRequest="50">
+                                    <Frame CornerRadius="50" WidthRequest="50" HeightRequest="50" Margin="0,0,4,0">
+                                        <Image x:Name="authorImage"  Source="{Binding Owner.ProfilePicture}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+                                    </Frame>
+                                    <VerticalStackLayout>
+                                        <Label x:Name="fullName" Text="{Binding Owner.OfficialName}" TextColor="{x:StaticResource Gray500}"/>
+                                        <Label x:Name="userName" Text="{Binding Owner.UserName}" FontAttributes="Bold"/>
+                                    </VerticalStackLayout>
+                                </FlexLayout>
+                                <StackLayout>
+                                    <Label x:Name="postTitle" Text="{Binding PostTitle}" FontAttributes="Bold"/>
+                                    <Label x:Name="postBody" Text="{Binding PostInformation}" LineHeight="1.1" TextColor="{x:StaticResource Gray500}"/>
+                                </StackLayout>
+                                <CarouselView ItemsSource="{Binding Files}">
+                                    <CarouselView.ItemTemplate>
+                                        <DataTemplate x:DataType="models:ImageInfo">
+                                            <Frame HeightRequest="400" CornerRadius="4" Padding="0" BackgroundColor="WhiteSmoke" BorderColor="Transparent">
+                                                <Image Source="{Binding LinkToImage}" Aspect="AspectFill"/>
+                                            </Frame>
+                                        </DataTemplate>
+                                    </CarouselView.ItemTemplate>
+                                </CarouselView>
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </FlexLayout>
+</ContentPage>

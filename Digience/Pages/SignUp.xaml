@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Digience.Pages.SignUp">
+    <VerticalStackLayout Spacing="20"                        
+                     VerticalOptions="Center"
+    Padding="40" Margin="0,0,0,200">
+        <StackLayout Margin="0,0,0,40">
+            <Image Source="app_icon.svg" HorizontalOptions="Center" WidthRequest="60"/>
+        </StackLayout>
+        <Label Text="Login" FontSize="Title" HorizontalOptions="Center"/>
+        <StackLayout Spacing="10">
+            <Entry x:Name="signupEmail" x:Uid="signupEmail" Placeholder="email" />
+            <Entry x:Name="signupPassword" x:Uid="signupPassword" IsPassword="true" Placeholder="password" />
+            <Entry x:Name="repeatPassword" x:Uid="repeatPassword" IsPassword="true" Placeholder="repeat password" />
+        </StackLayout>
+        <Frame CornerRadius="40" Padding="0">
+            <Button x:Name="signupButton" Text="Login" Clicked="Signup_Button_Clicked"/>
+        </Frame>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Already have an account? "/>
+            <Label Text="Login" x:Uid="loginLink" TextColor="{x:StaticResource Primary}" FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Login_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
